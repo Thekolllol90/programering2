@@ -4,7 +4,11 @@ public class hemläxa {
 	public static void main(String[] args) {
 		
 		int arr[] = { 4, 6, 10, 8, 2 };
-		System.out.print(heltal_summa(arr));
+		System.out.println(heltal_summa(arr));
+
+		String str = ("jag är en string");
+		String revstr = rec(str);
+		System.out.println("stringen är: " + revstr);
 	
 	}
 	
@@ -14,6 +18,12 @@ public class hemläxa {
 			res = res + arr[i];
 		}
 		return res;
+	}
+	
+	public static String rec(String str) {
+		if(str.isEmpty())
+			return str;
+		return rec(str.substring(1)) + str.charAt(0);
 	}
 }
 
